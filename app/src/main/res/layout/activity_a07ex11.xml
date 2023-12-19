@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercicios.A07ex11_12">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMaps1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="mudaMapa"
+        android:text="Texugo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <Button
+        android:id="@+id/btnMaps2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="mudaMapa"
+        android:text="Casa"
+        app:layout_constraintEnd_toEndOf="@+id/btnMaps1"
+        app:layout_constraintStart_toStartOf="@+id/btnMaps1"
+        app:layout_constraintTop_toBottomOf="@+id/btnMaps1" />
+
+    <Button
+        android:id="@+id/btnMap3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="mudaMapa"
+        android:text="IFSP"
+        app:layout_constraintEnd_toEndOf="@+id/btnMaps2"
+        app:layout_constraintStart_toStartOf="@+id/btnMaps2"
+        app:layout_constraintTop_toBottomOf="@+id/btnMaps2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
