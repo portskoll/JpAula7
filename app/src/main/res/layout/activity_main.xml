@@ -100,6 +100,19 @@
                 android:layout_gravity="center_horizontal"
                 android:text="A07ex11_12" />
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inicio Aula 8" />
+
+            <Button
+                android:id="@+id/btnA08_01"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="A08ex1_2_3" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

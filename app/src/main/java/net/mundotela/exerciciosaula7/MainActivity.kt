@@ -16,6 +16,7 @@ import net.mundotela.exerciciosaula7.exercicios.A07ex07.A07ex07
 import net.mundotela.exerciciosaula7.exercicios.A07ex08
 import net.mundotela.exerciciosaula7.exercicios.A07ex09
 import net.mundotela.exerciciosaula7.exercicios.A07ex11_12
+import net.mundotela.exerciciosaula7.exercicios.A08ex01
 import net.mundotela.exerciciosaula7.exercicios.MapsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var exe9: Button
     lateinit var exe10: Button
     lateinit var exe11: Button
+    lateinit var exe08_01: Button
 
 
 
@@ -50,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         exe9 = findViewById(R.id.btn09)
         exe10 = findViewById(R.id.btn10)
         exe11 = findViewById(R.id.btn11)
+        exe08_01 = findViewById(R.id.btnA08_01)
 
         val clickListener = View.OnClickListener { view ->
             when (view.id){
@@ -65,6 +68,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.btn09 -> iniciarActivity(this, A07ex09::class.java)
                 R.id.btn10 -> iniciarActivity(this, MapsActivity::class.java)
                 R.id.btn11 -> iniciarActivity(this, A07ex11_12::class.java)
+                R.id.btnA08_01 -> iniciarActivity(this, A08ex01::class.java)
 
             }
         }
@@ -80,6 +84,8 @@ class MainActivity : AppCompatActivity() {
         exe9.setOnClickListener(clickListener)
         exe10.setOnClickListener(clickListener)
         exe11.setOnClickListener(clickListener)
+        exe08_01.setOnClickListener(clickListener)
+
     }
 
 
