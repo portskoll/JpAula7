@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         //Buscando os dados do Randon User que serão usados no Aula8 ex4
         criarUserRandom()
 
-        title = "Exercicios aula 7"
+        title = "Exercicios aula 7 e 8"
 
         exe1 = findViewById(R.id.btn01)
         exe2 = findViewById(R.id.btn02)

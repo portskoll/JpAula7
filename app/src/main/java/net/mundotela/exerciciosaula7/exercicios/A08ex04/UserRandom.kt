@@ -13,6 +13,7 @@ class UserRandom(val foto: String = "", val nome: String = "", val email: String
 }
 object ListUser{
     val users = ArrayList<UserRandom>()
+
 }
 fun criarUserRandom(): Unit{
 
@@ -21,7 +22,7 @@ fun criarUserRandom(): Unit{
     serviceRU.getUserRU().enqueue(object : Callback<UserResponseRU>{
         override fun onResponse(call: Call<UserResponseRU>, response: Response<UserResponseRU>) {
             val dadosrecebidos = response.body()!!.results
-
+            ListUser.users.clear()
             for (u in dadosrecebidos){
                 ListUser.users.add(UserRandom(u.picture.large,"${u.name.first} ${u.name.last}", u.email))
             }

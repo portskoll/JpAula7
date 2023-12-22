@@ -1,6 +1,7 @@
 package net.mundotela.exerciciosaula7.exercicios.A08ex04
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import net.mundotela.exerciciosaula7.R
+import net.mundotela.exerciciosaula7.exercicios.aula8Fim
 
 class CustonAdpeter3(private val context: Context, var dataset: ArrayList<UserRandom>) : RecyclerView.Adapter<CustonAdpeter3.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -27,6 +29,14 @@ class CustonAdpeter3(private val context: Context, var dataset: ArrayList<UserRa
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.nome.text = dataset[position].nome
         holder.email.text = dataset[position].email
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, aula8Fim::class.java).apply{
+                putExtra("nome", dataset[position].nome)
+                putExtra("email", dataset[position].email)
+                putExtra("foto", dataset[position].foto)
+            }
+            context.startActivity(intent)
+        }
         try {
             Glide.with(context)
                 .load(dataset[position].foto)
