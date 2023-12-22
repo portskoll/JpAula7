@@ -17,6 +17,8 @@ import net.mundotela.exerciciosaula7.exercicios.A07ex08
 import net.mundotela.exerciciosaula7.exercicios.A07ex09
 import net.mundotela.exerciciosaula7.exercicios.A07ex11_12
 import net.mundotela.exerciciosaula7.exercicios.A08ex01
+import net.mundotela.exerciciosaula7.exercicios.A08ex04.A08ex04
+import net.mundotela.exerciciosaula7.exercicios.A08ex04.criarUserRandom
 import net.mundotela.exerciciosaula7.exercicios.MapsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -33,12 +35,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var exe10: Button
     lateinit var exe11: Button
     lateinit var exe08_01: Button
+    lateinit var exe08_04: Button
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Buscando os dados do Randon User que serão usados no Aula8 ex4
+        criarUserRandom()
+
         title = "Exercicios aula 7"
 
         exe1 = findViewById(R.id.btn01)
@@ -53,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         exe10 = findViewById(R.id.btn10)
         exe11 = findViewById(R.id.btn11)
         exe08_01 = findViewById(R.id.btnA08_01)
+        exe08_04 = findViewById(R.id.btnA08_04)
 
         val clickListener = View.OnClickListener { view ->
             when (view.id){
@@ -69,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.btn10 -> iniciarActivity(this, MapsActivity::class.java)
                 R.id.btn11 -> iniciarActivity(this, A07ex11_12::class.java)
                 R.id.btnA08_01 -> iniciarActivity(this, A08ex01::class.java)
+                R.id.btnA08_04 -> iniciarActivity(this, A08ex04::class.java)
 
             }
         }
@@ -85,6 +93,7 @@ class MainActivity : AppCompatActivity() {
         exe10.setOnClickListener(clickListener)
         exe11.setOnClickListener(clickListener)
         exe08_01.setOnClickListener(clickListener)
+        exe08_04.setOnClickListener(clickListener)
 
     }
 
